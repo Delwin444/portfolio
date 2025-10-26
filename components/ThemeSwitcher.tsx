@@ -2,25 +2,32 @@ import {SpeedDial, SpeedDialAction, Box} from "@mui/material";
 import {useColorScheme} from "@mui/material";
 import {LightMode, DarkMode, SettingsBrightness} from '@mui/icons-material';
 import {ReactElement} from "react";
-import {Mode} from "@mui/system/cssVars/useCurrentColorScheme";
+
+enum Mode {
+    LIGHT = 'light',
+    DARK = 'dark',
+    SYSTEM = 'system'
+}
 
 const actions: Array<{ icon: ReactElement, name: Mode }> = [
-    {icon: <LightMode/>, name: 'light'},
-    {icon: <DarkMode/>, name: 'dark'},
-    {icon: <SettingsBrightness/>, name: 'system'},
+    {icon: <LightMode/>, name: Mode.LIGHT},
+    {icon: <DarkMode/>, name: Mode.DARK},
+    {icon: <SettingsBrightness/>, name: Mode.SYSTEM},
 ];
 
 const tooltipLabel: Record<Mode, string> = {
     light: 'Heller Modus',
     dark: 'Dunkler Modus',
     system: 'System Einstellung',
-}
+};
 
 export const ThemeSwitcher = () => {
     const {mode, setMode} = useColorScheme();
+
     const getDefaultIcon = () => actions.find((action) => {
         return action.name === mode
     })?.icon;
+
     return (
         <Box sx={{position: 'fixed', top: '20px', right: '20px'}}>
             <SpeedDial ariaLabel="Select Theme"
