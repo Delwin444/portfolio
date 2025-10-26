@@ -1,19 +1,26 @@
 import {ReactElement} from "react";
 
 const maxSkillRating = 5;
-export const SkillElement = ({skill, rating}: {skill: string, rating: number}): ReactElement => {
+type SkillElementProps = {
+    skill: string,
+    rating: number
+}
+
+export const SkillElement = ({skill, rating}: SkillElementProps): ReactElement => {
+    const activeColor: string = rating < 3 ? 'bg-yellow-400' : 'bg-green-600';
     return (
-        <tr>
-            <td className="pr-4">
+        <>
+            <div>
                 {skill}
-            </td>
-            <td className="min-w-24">
-                <div className="flex w-full items-stretch bg-white gap-0.5 rounded-xs overflow-hidden">
-                    {[...Array(maxSkillRating).keys().map((index) => {
-                        return <div className={`${index < rating ? 'bg-green-600' : 'bg-gray-400'} flex-1 h-2`} key={index}></div>
+            </div>
+            <div className="flex items-center">
+                <div className="flex w-full items-stretch  gap-1 h-2">
+                    {[...Array(maxSkillRating).keys().map((index): ReactElement => {
+                        return <div className={`${index < rating ? activeColor : 'bg-gray-400'} flex-1 h-full rounded-xs`}
+                                    key={index}></div>
                     })]}
                 </div>
-            </td>
-        </tr>
+            </div>
+        </>
     );
 };
