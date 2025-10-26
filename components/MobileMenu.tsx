@@ -4,7 +4,7 @@ import {ReactElement, useState, useMemo} from "react";
 import {useRouter, usePathname} from "next/navigation";
 
 type MenuItem = {label: string, path: string, icon: ReactElement};
-const MenuElements: Array<MenuItem> = [
+const menuElements: Array<MenuItem> = [
     {
         label: 'Home',
         path: '/',
@@ -20,12 +20,12 @@ const MenuElements: Array<MenuItem> = [
         path: '/references',
         icon: <Assignment/>
     },
-]
+];
 
 export const MobileMenu = (): ReactElement => {
     const pathName = usePathname();
     const activeIndex = useMemo(() => {
-        const index = MenuElements.findIndex(menuElement => menuElement.path === pathName);
+        const index = menuElements.findIndex(menuElement => menuElement.path === pathName);
         return index !== -1 ? index : 0;
     }, [pathName]);
     const [value, setValue] = useState(activeIndex);
@@ -38,7 +38,7 @@ export const MobileMenu = (): ReactElement => {
                               onChange={(_e, newValue) => {
                                   setValue(newValue);
                               }}>
-                {MenuElements.map(menuElement => {
+                {menuElements.map(menuElement => {
                     return <BottomNavigationAction key={menuElement.label}
                                                    label={menuElement.label}
                                                    showLabel={true}

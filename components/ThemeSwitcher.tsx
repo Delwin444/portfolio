@@ -29,7 +29,7 @@ export const ThemeSwitcher = () => {
     })?.icon;
 
     return (
-        <Box sx={{position: 'fixed', top: '20px', right: '20px'}}>
+        <Box sx={{position: 'fixed', top: '20px', right: '20px', zIndex: 1000}}>
             <SpeedDial ariaLabel="Select Theme"
                        icon={getDefaultIcon()}
                        direction="down"
