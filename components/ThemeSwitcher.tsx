@@ -8,7 +8,14 @@ const actions: Array<{ icon: ReactElement, name: Mode }> = [
     {icon: <LightMode/>, name: 'light'},
     {icon: <DarkMode/>, name: 'dark'},
     {icon: <SettingsBrightness/>, name: 'system'},
-]
+];
+
+const tooltipLabel: Record<Mode, string> = {
+    light: 'Heller Modus',
+    dark: 'Dunkler Modus',
+    system: 'System Einstellung',
+}
+
 export const ThemeSwitcher = () => {
     const {mode, setMode} = useColorScheme();
     const getDefaultIcon = () => actions.find((action) => {
@@ -22,7 +29,7 @@ export const ThemeSwitcher = () => {
             >
                 {actions.map(action => (
                     <SpeedDialAction onClick={() => setMode(action.name)} key={action.name} icon={action.icon}
-                                     slotProps={{tooltip: {title: action.name}}}/>
+                                     slotProps={{tooltip: {title: tooltipLabel[action.name]}}}/>
                 ))}
             </SpeedDial>
         </Box>
