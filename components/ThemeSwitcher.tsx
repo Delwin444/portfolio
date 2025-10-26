@@ -16,9 +16,9 @@ const actions: Array<{ icon: ReactElement, name: Mode }> = [
 ];
 
 const tooltipLabel: Record<Mode, string> = {
-    light: 'Heller Modus',
-    dark: 'Dunkler Modus',
-    system: 'System Einstellung',
+    [Mode.LIGHT]: 'Heller Modus',
+    [Mode.DARK]: 'Dunkler Modus',
+    [Mode.SYSTEM]: 'System Einstellung',
 };
 
 export const ThemeSwitcher = () => {
