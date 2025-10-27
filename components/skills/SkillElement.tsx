@@ -15,10 +15,10 @@ export const SkillElement = ({skill, rating}: SkillElementProps): ReactElement =
             </div>
             <div className="flex items-center">
                 <div className="flex w-full items-stretch  gap-1 h-2">
-                    {[...Array(maxSkillRating).keys().map((index): ReactElement => {
+                    {[...Array(maxSkillRating).keys()].map((index: number): ReactElement => {
                         return <div className={`${index < rating ? activeColor : 'bg-gray-400'} flex-1 h-full rounded-xs`}
                                     key={index}></div>
-                    })]}
+                    })}
                 </div>
             </div>
         </>
