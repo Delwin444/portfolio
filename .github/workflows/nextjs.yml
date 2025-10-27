@@ -57,12 +57,22 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Upload build artifact (out/)
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-out
+          path: out
 
   # Deployment job
   deploy:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-out
+          path: out
       - name: Deploy over FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
