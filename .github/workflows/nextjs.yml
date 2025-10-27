@@ -64,7 +64,7 @@ jobs:
           cp -r .next/standalone/* deploy/
           # Static assets referenced by the server
           mkdir -p deploy/.next
-          cp -r .next/server deploy/.next/server
+          cp -r .next/standalone deploy/.next/standalone
           cp -r .next/static deploy/.next/static
           # Public assets (if any)
           if [ -d "public" ]; then cp -r public deploy/public; fi
