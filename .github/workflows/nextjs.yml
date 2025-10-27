@@ -62,6 +62,9 @@ jobs:
           mkdir -p deploy
           # Standalone server files
           cp -r .next/standalone/* deploy/
+          # Static assets referenced by the server
+          mkdir -p deploy/.next
+          cp -r .next/static deploy/.next/static
           # Public assets (if any)
           if [ -d "public" ]; then cp -r public deploy/public; fi
       - name: Upload build artifact (out/)
@@ -69,6 +72,7 @@ jobs:
         with:
           name: next-standalone-bundle
           path: deploy
+          include-hidden-files: 'true'
 
   # Deployment job
   deploy:
