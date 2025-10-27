@@ -90,3 +90,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: deploy/
+          exclude: |
+            **/.git*
+            **/.git*/**
