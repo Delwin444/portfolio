@@ -89,4 +89,4 @@ jobs:
           server: hosting174693.a2e8e.netcup.net
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: deploy
+          local-dir: deploy/
