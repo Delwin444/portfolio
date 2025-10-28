@@ -61,7 +61,7 @@ jobs:
         run: |
           mkdir -p deploy
           # Standalone server files
-          cp -r .next/standalone deploy/
+          cp -r .next/standalone/. deploy/
           # Static assets referenced by the server
           mkdir -p deploy/.next
           cp -r .next/static deploy/.next/static
