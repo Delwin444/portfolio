@@ -25,7 +25,7 @@ export const TopMenu = (): ReactElement => {
 
     return (
         <AppBar position="static" className="hidden! lg:flex! py-4">
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Image className="logo-colored" src="./logo.svg" alt="logo" width="60" height="85"/>
                     <Image className="logo-white" src="./logo_w.svg" alt="logo white" width="60" height="85"/>
