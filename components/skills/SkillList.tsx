@@ -1,3 +1,4 @@
+"use client";
 import {ReactElement} from "react";
 import {SkillElement} from "del/components/skills/SkillElement";
 
@@ -10,7 +11,7 @@ export const SkillList = ({skills}: { skills: SkillListType }): ReactElement => 
     }));
     return (
         <>
-            <section className="grid grid-cols-2">
+            <section className="grid grid-cols-3">
                 {Object.keys(skills).map((skillName) => {
                     return <SkillElement key={skillName} skill={skillName} rating={skills[skillName]}/>
                 })}

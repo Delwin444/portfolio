@@ -108,7 +108,7 @@ export const SkillSection = () => {
                     return <Accordion key={category} expanded={isCategoryFiltered(category)}
                                       onChange={() => onCategorySelected(category)}>
                         <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
-                            <h3>{labels[category]}</h3>
+                            <h3 className="text-xl p-1">{labels[category]}</h3>
                         </AccordionSummary>
                         <AccordionDetails>
                             <SkillList skills={skills[category]}/>
