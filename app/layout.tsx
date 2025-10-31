@@ -26,7 +26,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
     });
 
     return (
-        <AppRouterCacheProvider>
+        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <ThemeProvider theme={theme}>
                 <html lang="en" suppressHydrationWarning>
                 <CssBaseline/>
