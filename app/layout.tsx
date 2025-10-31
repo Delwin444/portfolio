@@ -4,12 +4,13 @@
 import "./globals.css";
 
 import {ReactElement} from "react";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import {ThemeSwitcher} from "del/components/ThemeSwitcher";
 import {MobileMenu} from "del/components/MobileMenu";
 import {TopMenu} from "del/components/TopMenu";
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
+import {AppRouterCacheProvider} from "@mui/material-nextjs/v13-appRouter";
 
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode }>): ReactElement {
@@ -25,19 +26,21 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
     });
 
     return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline/>
-            <html lang="en" suppressHydrationWarning>
-            <body className={`antialiased`}>
-            <InitColorSchemeScript attribute="class" />
-            <TopMenu/>
-            <ThemeSwitcher/>
-            <main className="lg:max-w-[1280px] mx-auto px-4 py-10 md:pb-20">
-                {children}
-            </main>
-            <MobileMenu/>
-            </body>
-            </html>
-        </ThemeProvider>
+        <AppRouterCacheProvider>
+            <ThemeProvider theme={theme}>
+                <html lang="en" suppressHydrationWarning>
+                <CssBaseline/>
+                <body className={`antialiased`}>
+                <InitColorSchemeScript attribute="class"/>
+                <TopMenu/>
+                <ThemeSwitcher/>
+                <main className="lg:max-w-[1280px] mx-auto px-4 py-10 md:pb-20">
+                    {children}
+                </main>
+                <MobileMenu/>
+                </body>
+                </html>
+            </ThemeProvider>
+        </AppRouterCacheProvider>
     );
 }
