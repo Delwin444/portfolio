@@ -45,7 +45,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                 <InitColorSchemeScript attribute="class"/>
                 <TopMenu/>
                 <ThemeSwitcher/>
-                <main className="lg:max-w-[1280px] mx-auto px-4 py-10 md:pb-20">
+                <main className="lg:max-w-[1280px] mx-auto px-4 py-10 md:pb-30">
                     {children}
                 </main>
                 <MobileMenu/>
