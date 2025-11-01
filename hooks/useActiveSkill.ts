@@ -1,4 +1,4 @@
-import { create } from 'zustand'
+import {create} from 'zustand'
 
 interface ActiveSkillState {
     activeSkill: string,
@@ -6,6 +6,9 @@ interface ActiveSkillState {
     clickedActiveSkill: string,
     setActiveSkill: (skill: string) => void,
     setClickedActiveSkill: (skill: string) => void,
+    isMobileModalOpen: boolean,
+    openMobileModal: () => void,
+    closeMobileModal: () => void,
 }
 
 export const useActiveSkill = create<ActiveSkillState>((set) => ({
@@ -21,4 +24,7 @@ export const useActiveSkill = create<ActiveSkillState>((set) => ({
         clickedActiveSkill: skill,
         activeSkill: state.hoveredActiveSkill || skill || '',
     })),
+    isMobileModalOpen: false,
+    openMobileModal: () => set({isMobileModalOpen: true}),
+    closeMobileModal: () => set({isMobileModalOpen: false}),
 }));
