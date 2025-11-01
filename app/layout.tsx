@@ -1,8 +1,6 @@
 "use client";
 
-
 import "./globals.css";
-
 import {ReactElement} from "react";
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -14,14 +12,27 @@ import {AppRouterCacheProvider} from "@mui/material-nextjs/v13-appRouter";
 
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode }>): ReactElement {
-
+    const primaryColor = '#189ad3';
     const theme = createTheme({
         cssVariables: {
             colorSchemeSelector: 'class'
         },
         colorSchemes: {
-            dark: true,
-            light: true,
+            dark: {
+                palette: {
+                    primary: {
+                        main: primaryColor,
+                        contrastText: 'rgba(0, 0, 0, 0.87)',
+                    }
+                }
+            },
+            light: {
+                palette: {
+                    primary: {
+                        main: primaryColor,
+                    }
+                }
+            },
         },
     });
 
