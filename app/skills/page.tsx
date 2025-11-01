@@ -3,7 +3,7 @@ import {SkillDetail} from "del/components/skills/SkillDetail";
 
 export default function Page() {
     return (
-        <div className="flex">
+        <div className="flex gap-8">
             <div className="hidden md:block flex-1">
                 <SkillDetail/>
             </div>

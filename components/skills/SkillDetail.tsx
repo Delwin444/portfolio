@@ -3,6 +3,7 @@ import {useActiveSkill} from "del/hooks/useActiveSkill";
 import dynamic from "next/dynamic";
 import CircularProgress from '@mui/material/CircularProgress';
 import {ComponentType, ReactElement} from "react";
+import { Paper } from "@mui/material";
 
 const SkillDetailLoader = () => <CircularProgress />;
 
@@ -24,10 +25,12 @@ export const SkillDetail = (): ReactElement => {
     const SkillDetailComponent = components[activeSkill];
     return (
         <>
-            {activeSkill && components.hasOwnProperty(activeSkill) && <SkillDetailComponent/>}
-            {!activeSkill &&
-                <p>Hover über einen Skill um mehr Informationen zu erhalten</p>
-            }
+            <Paper className="p-4 h-full" elevation={1}>
+                {activeSkill && components.hasOwnProperty(activeSkill) && <SkillDetailComponent/>}
+                {!activeSkill &&
+                    <p>Hover über einen Skill um mehr Informationen zu erhalten</p>
+                }
+            </Paper>
         </>
     );
 };
