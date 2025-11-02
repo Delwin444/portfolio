@@ -40,6 +40,10 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <ThemeProvider theme={theme}>
                 <html lang="en" suppressHydrationWarning>
+                <head>
+                    <meta name="apple-mobile-web-app-title" content="Delwin444" />
+                    <title>Portfolio - Delwin444</title>
+                </head>
                 <CssBaseline/>
                 <body className={`antialiased`}>
                 <InitColorSchemeScript attribute="class"/>
