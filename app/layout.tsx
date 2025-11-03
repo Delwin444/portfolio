@@ -43,6 +43,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                 <head>
                     <meta name="apple-mobile-web-app-title" content="Delwin444" />
                     <title>Portfolio - Delwin444</title>
+                    <link rel="manifest" href="/manifest.json" />
                 </head>
                 <CssBaseline/>
                 <body className={`antialiased`}>
