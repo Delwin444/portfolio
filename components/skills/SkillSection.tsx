@@ -22,7 +22,6 @@ const skills: Record<SkillCategories, SkillListType> = {
         "gdScript": 4,
         "Javascript": 4,
         "Typescript": 3,
-        "Python": 1,
         "C++": 1,
     },
     [SkillCategories.frontendFrameworks]: {

@@ -9,15 +9,14 @@ import CloseIcon from '@mui/icons-material/Close';
 const SkillDetailLoader = () => <CircularProgress/>;
 
 const components: Record<string, ComponentType> = {
-    "CSS": dynamic(() => import("./skillDetails/Css"), {ssr: false, loading: SkillDetailLoader}),
-    "gdScript": dynamic(() => import("./skillDetails/GdScript"), {ssr: false, loading: SkillDetailLoader}),
-    "Javascript": dynamic(() => import("./skillDetails/JavaScript"), {ssr: false, loading: SkillDetailLoader}),
-    "Less": dynamic(() => import("./skillDetails/Less"), {ssr: false, loading: SkillDetailLoader}),
-    "PHP": dynamic(() => import("./skillDetails/Php"), {ssr: false, loading: SkillDetailLoader}),
-    "Scss": dynamic(() => import("./skillDetails/Scss"), {ssr: false, loading: SkillDetailLoader}),
-    "Typescript": dynamic(() => import("./skillDetails/TypeScript"), {ssr: false, loading: SkillDetailLoader}),
-    "C++": dynamic(() => import("./skillDetails/Cplusplus"), {ssr: false, loading: SkillDetailLoader}),
-    "Python": dynamic(() => import("./skillDetails/Python"), {ssr: false, loading: SkillDetailLoader}),
+    "CSS": dynamic(() => import("./skillDetails/programmingLanguages/Css"), {ssr: false, loading: SkillDetailLoader}),
+    "gdScript": dynamic(() => import("./skillDetails/programmingLanguages/GdScript"), {ssr: false, loading: SkillDetailLoader}),
+    "Javascript": dynamic(() => import("./skillDetails/programmingLanguages/JavaScript"), {ssr: false, loading: SkillDetailLoader}),
+    "Less": dynamic(() => import("./skillDetails/programmingLanguages/Less"), {ssr: false, loading: SkillDetailLoader}),
+    "PHP": dynamic(() => import("./skillDetails/programmingLanguages/Php"), {ssr: false, loading: SkillDetailLoader}),
+    "Scss": dynamic(() => import("./skillDetails/programmingLanguages/Scss"), {ssr: false, loading: SkillDetailLoader}),
+    "Typescript": dynamic(() => import("./skillDetails/programmingLanguages/TypeScript"), {ssr: false, loading: SkillDetailLoader}),
+    "C++": dynamic(() => import("./skillDetails/programmingLanguages/Cplusplus"), {ssr: false, loading: SkillDetailLoader}),
 };
 
 
