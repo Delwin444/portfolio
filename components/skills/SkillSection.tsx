@@ -1,11 +1,11 @@
 "use client";
-import {SkillList, SkillListType} from "del/components/skills/SkillList";
-import {ButtonGroup, Button, Accordion, AccordionDetails, AccordionSummary, Tooltip} from "@mui/material";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import {ReactElement, useState} from "react";
+import {SkillListType} from "del/components/skills/SkillList";
+import {ButtonGroup, Button, Tooltip} from "@mui/material";
+import {ReactElement, useCallback, useState} from "react";
 import {Monitor, Terminal, Storage, Code, DesignServices} from "@mui/icons-material";
+import {SkillAccordion} from "del/components/skills/SkillAccordion";
 
-enum SkillCategories {
+export enum SkillCategories {
     "programmingLanguages" = "programmingLanguages",
     "frontendFrameworks" = "frontendFrameworks",
     "backendFrameworks" = "backendFrameworks",
@@ -74,21 +74,13 @@ const categoryIcons: Record<SkillCategories, ReactElement> = {
 export const SkillSection = () => {
     const [filteredCategories, setFilteredCategories] = useState<Array<string>>(["programmingLanguages"]);
 
-    const onCategorySelected = (category: SkillCategories): void => {
-        if (isCategoryFiltered(category)) {
-            setFilteredCategories(filteredCategories.filter(c => c !== category));
-        } else {
-            setFilteredCategories([...filteredCategories, category]);
-        }
-    };
-
-    const getCategoryIndex = (category: SkillCategories): number => {
-        return filteredCategories.indexOf(category);
-    };
-
-    const isCategoryFiltered = (category: SkillCategories): boolean => {
-        return getCategoryIndex(category) !== -1;
-    };
+    const onCategorySelected = useCallback((category: SkillCategories): void => {
+        setFilteredCategories(prev =>
+            prev.includes(category)
+                ? prev.filter(c => c !== category)
+                : [...prev, category]
+        );
+    }, []);
 
     return (
         <>
@@ -96,7 +88,7 @@ export const SkillSection = () => {
             <ButtonGroup className="pb-4">
                 {(Object.keys(skills) as SkillCategories[]).map((category) => {
                     return <Tooltip key={category} title={labels[category]}>
-                        <Button variant={!isCategoryFiltered(category) ? 'outlined' : 'contained'}
+                        <Button variant={filteredCategories.includes(category) ? 'contained' : 'outlined'}
                                 onClick={() => onCategorySelected(category)}>
                             {categoryIcons[category] || labels[category]}
                         </Button>
@@ -105,15 +97,14 @@ export const SkillSection = () => {
             </ButtonGroup>
             <div className="flex flex-col gap-2">
                 {(Object.keys(skills) as SkillCategories[]).map(category => {
-                    return <Accordion key={category} expanded={isCategoryFiltered(category)}
-                                      onChange={() => onCategorySelected(category)}>
-                        <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
-                            <h3 className="text-xl p-1">{labels[category]}</h3>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <SkillList skills={skills[category]}/>
-                        </AccordionDetails>
-                    </Accordion>;
+                    return <SkillAccordion
+                        key={category}
+                        category={category}
+                        expanded={filteredCategories.includes(category)}
+                        handleToggle={onCategorySelected}
+                        skills={skills}
+                        label={labels[category]}
+                    />
                 })}
             </div>
         </>
