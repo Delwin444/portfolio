@@ -11,12 +11,11 @@ type SkillElementProps = {
 
 export const SkillElement = ({skill, rating}: SkillElementProps): ReactElement => {
     const activeColor: string = rating < 3 ? 'bg-yellow-400' : 'bg-green-600';
-    const activeSkill: string = useActiveSkill((state) => state.activeSkill);
     const setHoveredActiveSkill = useActiveSkill((state) => state.setActiveSkill);
     const setClickedActiveSkill = useActiveSkill((state) => state.setClickedActiveSkill);
     const openMobileModal = useActiveSkill((state) => state.openMobileModal);
     const isMobile = useMediaQuery('(max-width: 1024px)');
-    const isActive = activeSkill === skill;
+    const isActive = useActiveSkill((state) => state.activeSkill === skill);
     return (
         <>
             <div className="text-right">
