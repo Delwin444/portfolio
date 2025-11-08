@@ -1,18 +1,18 @@
 "use client";
-import {ReactElement} from "react";
+import {ReactElement, useMemo} from "react";
 import {SkillElement} from "del/components/skills/SkillElement";
 
 export type SkillListType = Record<string, number>;
 
 
 export const SkillList = ({skills}: { skills: SkillListType }): ReactElement => {
-    skills = Object.fromEntries(Object.entries(skills).sort((a, b) => {
-        return b[1] - a[1] || a[0].localeCompare(b[0]);
-    }));
+    const sortedSkills = useMemo(() => (
+        Object.keys(skills).sort((a, b) => skills[b] - skills[a] || a.localeCompare(b))
+    ), [skills])
     return (
         <>
             <section className="grid grid-cols-3">
-                {Object.keys(skills).map((skillName) => {
+                {sortedSkills.map((skillName) => {
                     return <SkillElement key={skillName} skill={skillName} rating={skills[skillName]}/>
                 })}
             </section>
