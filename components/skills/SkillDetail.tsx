@@ -56,6 +56,7 @@ export const SkillDetailModal = (): ReactElement => {
         boxShadow: 24,
         p: 4,
         minWidth: '70%',
+        minHeight: '250px',
         outline: 'none',
     };
     const activeSkill = useActiveSkill((state) => state.activeSkill);
