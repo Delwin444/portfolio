@@ -4,7 +4,8 @@ const Tekton = () => {
     return (
         <>
             <div className="flex justify-center p-4">
-                <Image src="/img/skills/ciCd/tekton.png" alt="Tekton Logo" width={341} height={110}/>
+                <Image src="/img/skills/ciCd/tekton.png" alt="Tekton Logo" width={341} height={110} placeholder="blur"
+                       blurDataURL="/img/skills/ciCd/tekton-blur.png"/>
             </div>
             <p>
                 <b>Tekton</b> ist ein cloudbasiertes tool für CI/CD Pipelines.

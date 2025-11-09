@@ -4,7 +4,8 @@ const JavaScript = () => {
     return (
         <>
             <div className="flex justify-center p-4">
-                <Image src="/img/skills/programmingLanguages/js.png" alt="JavaScript Logo" width={150} height={150}/>
+                <Image src="/img/skills/programmingLanguages/js.png" alt="JavaScript Logo" width={150} height={150}
+                placeholder="blur" blurDataURL="/img/skills/programmingLanguages/js-blur.jpg"/>
             </div>
             <p>
                 <b>JavaScript</b> war meine erste Programmiersprache. Anfangs (2014) wurde viel mit jQuery gemacht

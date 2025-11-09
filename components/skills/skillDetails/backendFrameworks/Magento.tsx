@@ -30,6 +30,7 @@ const Magento = () => {
                    target="_blank"
                    className="flex-1">
                     <Image src="/img/skills/frontend-certification.png" alt="Magento 2 Frontend Expert Zertifizierung Badge"
+                           placeholder="blur" blurDataURL="/img/skills/frontend-certification-blur.jpg"
                            width={480} height={479}/>
                 </a>
                 <p className="flex-1">

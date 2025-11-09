@@ -4,7 +4,8 @@ const KnockoutJS = () => {
     return (
         <>
             <div className="flex justify-center p-4">
-                <Image src="/img/skills/frontendFrameworks/ko.png" alt="KnockoutJS Logo" width={400} height={150}/>
+                <Image src="/img/skills/frontendFrameworks/ko.png" alt="KnockoutJS Logo" width={400} height={150}
+                       placeholder="blur" blurDataURL="/img/skills/frontendFrameworks/ko-blur.png"/>
             </div>
             <p>
                 <b>KnockoutJS</b> ist ein älteres JS Framework für declarative Binding und UI refresh (ohne Shadow DOM).
