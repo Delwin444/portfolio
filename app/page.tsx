@@ -1,4 +1,5 @@
 import Image from "next/image";
+import {GithubButton} from "del/components/GithubButton";
 
 export default function Home() {
   return (
@@ -44,7 +45,7 @@ export default function Home() {
                   className="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
                   <span className="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">"Hallo Welt"</span>
               </blockquote>
-              <div className="md:flex gap-8">
+              <div className="md:flex gap-8 mb-4">
                   <div className="flex-1">
                       <p>
                           2014 ging es wie bei vielen Entwickler:innen mit dem ersten "echo" los. Während meiner dualen Ausbildung
@@ -56,6 +57,19 @@ export default function Home() {
                         2017 ging es dann als PHP E-Commerce Entwickler ins Berufsleben. Seitdem habe ich mehrere Magento 2 / Adobe Commerce
                         Webshops umgesetzt.
                     </p>
+                  </div>
+              </div>
+              <hr className="mb-8" />
+              <div className="md:flex gap-8">
+                  <div className="flex-2">
+                      <p>
+                          Für diese Webseite habe ich mir nur wenige Abende vorgenommen. Die meiste Zeit ging in die Skills-Seite.
+                          Damit sie dennoch visuell ansprechend ist, habe ich erstmalig auf <a className="underline" href="https://mui.com/" target="_blank">mui</a> (Material UI) und <a className="underline" href="https://flowbite.com/" target="_blank">Flowbite</a> (TailwindCSS
+                          Komponenten) zurückgegriffen.
+                      </p>
+                  </div>
+                  <div className="flex-1">
+                      <GithubButton/>
                   </div>
               </div>
           </div>
