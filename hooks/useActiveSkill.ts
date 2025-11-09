@@ -4,7 +4,7 @@ interface ActiveSkillState {
     activeSkill: string,
     hoveredActiveSkill: string,
     clickedActiveSkill: string,
-    setActiveSkill: (skill: string) => void,
+    setHoveredActiveSkill: (skill: string) => void,
     setClickedActiveSkill: (skill: string) => void,
     isMobileModalOpen: boolean,
     openMobileModal: () => void,
@@ -16,7 +16,7 @@ export const useActiveSkill = create<ActiveSkillState>((set) => ({
     hoveredActiveSkill: '',
     clickedActiveSkill: '',
     // Treat setActiveSkill as the hover setter. Empty string clears hover.
-    setActiveSkill: (skill: string) => set((state) => ({
+    setHoveredActiveSkill: (skill: string) => set((state) => ({
         hoveredActiveSkill: skill,
         activeSkill: skill || state.clickedActiveSkill || '',
     })),

@@ -11,20 +11,22 @@ type SkillElementProps = {
 
 export const SkillElement = ({skill, rating}: SkillElementProps): ReactElement => {
     const activeColor: string = rating < 3 ? 'bg-yellow-400' : 'bg-green-600';
-    const setHoveredActiveSkill = useActiveSkill((state) => state.setActiveSkill);
+    const setHoveredActiveSkill = useActiveSkill((state) => state.setHoveredActiveSkill);
     const setClickedActiveSkill = useActiveSkill((state) => state.setClickedActiveSkill);
     const openMobileModal = useActiveSkill((state) => state.openMobileModal);
     const isMobile = useMediaQuery('(max-width: 1024px)');
     const isActive = useActiveSkill((state) => state.activeSkill === skill);
+    const isClicked = useActiveSkill((state) => state.clickedActiveSkill === skill);
     return (
         <>
             <div className="text-right">
                 <span className={"cursor-pointer p-0.5 inline-block text-lg pr-6 " +
-                        (isActive ? 'underline' : '')}
+                        (isActive ? 'underline ' : ' ') +
+                        (isClicked ? 'font-bold ' : ' ')}
                       onMouseEnter={() => setHoveredActiveSkill(skill)}
                       onMouseOut={() => setHoveredActiveSkill('')}
                       onClick={() => {
-                          setClickedActiveSkill(skill);
+                          setClickedActiveSkill(isClicked ? '' : skill);
                           if (isMobile) openMobileModal();
                       }}
                 >
