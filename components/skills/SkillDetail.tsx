@@ -40,7 +40,12 @@ const components: Record<string, ComponentType> = {
     "Tekton": dynamic(() => import("./skillDetails/ciCd/Tekton"), {ssr: false, loading: SkillDetailLoader}),
     "Kubernetes": dynamic(() => import("./skillDetails/ciCd/Kubernetes"), {ssr: false, loading: SkillDetailLoader}),
     "n8n": dynamic(() => import("./skillDetails/ciCd/N8n"), {ssr: false, loading: SkillDetailLoader}),
-
+    "Bitbucket": dynamic(() => import("./skillDetails/tools/Bitbucket"), {ssr: false, loading: SkillDetailLoader}),
+    "Jira": dynamic(() => import("./skillDetails/tools/Jira"), {ssr: false, loading: SkillDetailLoader}),
+    "Git": dynamic(() => import("./skillDetails/tools/Git"), {ssr: false, loading: SkillDetailLoader}),
+    "Github": dynamic(() => import("./skillDetails/tools/Github"), {ssr: false, loading: SkillDetailLoader}),
+    "PhpStorm": dynamic(() => import("./skillDetails/tools/PhpStorm"), {ssr: false, loading: SkillDetailLoader}),
+    "GitLab": dynamic(() => import("./skillDetails/tools/GitLab"), {ssr: false, loading: SkillDetailLoader}),
 };
 
 

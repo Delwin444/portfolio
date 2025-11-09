@@ -53,8 +53,10 @@ const skills: Record<SkillCategories, SkillListType> = {
     [SkillCategories.tools]: {
         "Git": 4,
         "Github": 4,
-        "Gitlab": 3,
+        "GitLab": 3,
         "Bitbucket": 5,
+        "Jira": 5,
+        "PhpStorm": 4,
     },
 };
 const labels: Record<SkillCategories, string> = {
