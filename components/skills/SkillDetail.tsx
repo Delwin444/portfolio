@@ -6,7 +6,7 @@ import {ComponentType, ReactElement, useLayoutEffect} from "react";
 import {Paper, Modal, Fade, Backdrop, Box, IconButton, useMediaQuery} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 
-const SkillDetailLoader = () => <div className="absolute left-0 top-0 bottom-0 right-0 bg-black/20">
+const SkillDetailLoader = () => <div className="absolute left-0 top-20 right-0">
     <div className="flex h-full w-full items-center justify-center">
         <CircularProgress className="self-center"/>
     </div>
