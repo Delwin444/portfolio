@@ -37,7 +37,7 @@ export const SkillElement = ({skill, rating}: SkillElementProps): ReactElement =
                  onMouseEnter={() => setHoveredActiveSkill(skill)}
                  onMouseLeave={() => setHoveredActiveSkill('')}
                  onClick={() => {
-                     setClickedActiveSkill(skill);
+                     setClickedActiveSkill(isClicked ? '' : skill);
                      if (isMobile) openMobileModal();
                  }}
             >
