@@ -17,6 +17,13 @@ const components: Record<string, ComponentType> = {
     "Scss": dynamic(() => import("./skillDetails/programmingLanguages/Scss"), {ssr: false, loading: SkillDetailLoader}),
     "Typescript": dynamic(() => import("./skillDetails/programmingLanguages/TypeScript"), {ssr: false, loading: SkillDetailLoader}),
     "C++": dynamic(() => import("./skillDetails/programmingLanguages/Cplusplus"), {ssr: false, loading: SkillDetailLoader}),
+    "React": dynamic(() => import("./skillDetails/frontendFrameworks/React"), {ssr: false, loading: SkillDetailLoader}),
+    "KnockoutJS": dynamic(() => import("./skillDetails/frontendFrameworks/KnockoutJS"), {ssr: false, loading: SkillDetailLoader}),
+    "TailwindCSS": dynamic(() => import("./skillDetails/frontendFrameworks/TailwindCSS"), {ssr: false, loading: SkillDetailLoader}),
+    "jQuery": dynamic(() => import("./skillDetails/frontendFrameworks/JQuery"), {ssr: false, loading: SkillDetailLoader}),
+    "jQuery UI": dynamic(() => import("./skillDetails/frontendFrameworks/JQueryUi"), {ssr: false, loading: SkillDetailLoader}),
+    "VueJS": dynamic(() => import("./skillDetails/frontendFrameworks/Vue"), {ssr: false, loading: SkillDetailLoader}),
+
 };
 
 

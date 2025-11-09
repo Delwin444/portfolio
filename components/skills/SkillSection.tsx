@@ -26,16 +26,18 @@ const skills: Record<SkillCategories, SkillListType> = {
     },
     [SkillCategories.frontendFrameworks]: {
         "React": 4,
-        "Next.js": 3,
-        "Tailwind": 4,
+        "TailwindCSS": 4,
         "jQuery": 4,
         "jQuery UI": 4,
+        "VueJS": 3,
+        "KnockoutJS": 4,
 
     },
     [SkillCategories.backendFrameworks]: {
         "Symfony": 3,
         "Doctrine": 2,
         "Magento 2": 5,
+        "Next.js": 3,
         "Typo 3": 2,
         "Odoo": 1,
         "Wordpress": 1,

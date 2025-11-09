@@ -4,7 +4,7 @@ const GdScript = () => {
     return (
         <>
             <div className="flex justify-center p-4">
-                <Image src="/img/skills/programmingLanguages/godot.svg" alt="css" width={150} height={150}/>
+                <Image src="/img/skills/programmingLanguages/godot.svg" alt="gdScript Logo" width={150} height={150}/>
             </div>
             <p>
                 Seit einigen Jahren interessiere ich mich für die Spiele-Entwicklung, sei es kleine JS Spiele wie Snake,
