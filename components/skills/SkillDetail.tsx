@@ -2,7 +2,7 @@
 import {useActiveSkill} from "del/hooks/useActiveSkill";
 import dynamic from "next/dynamic";
 import CircularProgress from '@mui/material/CircularProgress';
-import {ComponentType, ReactElement} from "react";
+import {ComponentType, ReactElement, useLayoutEffect} from "react";
 import {Paper, Modal, Fade, Backdrop, Box, IconButton, useMediaQuery} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -62,6 +62,11 @@ export const SkillDetailModal = (): ReactElement => {
     const isModalOpen = useActiveSkill((state) => state.isMobileModalOpen);
     const closeModal = useActiveSkill((state) => state.closeMobileModal);
     const SkillDetailComponent = components[activeSkill];
+    const isMobile = useMediaQuery('(max-width: 1024px)');
+    useLayoutEffect(() => {
+        if (!isMobile && isModalOpen) closeModal();
+    });
+
     return <Modal
         closeAfterTransition
         open={isModalOpen}
