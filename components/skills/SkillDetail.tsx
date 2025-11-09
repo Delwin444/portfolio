@@ -6,7 +6,11 @@ import {ComponentType, ReactElement} from "react";
 import {Paper, Modal, Fade, Backdrop, Box, IconButton, useMediaQuery} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 
-const SkillDetailLoader = () => <CircularProgress/>;
+const SkillDetailLoader = () => <div className="absolute left-0 top-0 bottom-0 right-0 bg-black/20">
+    <div className="flex h-full w-full items-center justify-center">
+        <CircularProgress className="self-center"/>
+    </div>
+</div>;
 
 const components: Record<string, ComponentType> = {
     "CSS": dynamic(() => import("./skillDetails/programmingLanguages/Css"), {ssr: false, loading: SkillDetailLoader}),
@@ -32,10 +36,10 @@ export const SkillDetail = (): ReactElement => {
     const SkillDetailComponent = components[activeSkill];
     const isMobile = useMediaQuery('(max-width: 1024px)');
     return (
-        <Paper className="p-4 h-full" elevation={1}>
+        <Paper className="p-4 h-full relative" elevation={1}>
             {activeSkill && components.hasOwnProperty(activeSkill) && !isMobile && <SkillDetailComponent/>}
             {!activeSkill &&
-                <p>Hover über einen Skill um mehr Informationen zu erhalten</p>
+                <p>Hover über einen Skill um mehr Informationen zu erhalten. Mit einem Klick kannst du eine Auswahl sichern.</p>
             }
         </Paper>
     );
