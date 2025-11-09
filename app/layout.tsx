@@ -10,6 +10,22 @@ import {TopMenu} from "del/components/TopMenu";
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
 import {AppRouterCacheProvider} from "@mui/material-nextjs/v13-appRouter";
 
+const comment = `
+<!--
+                   #                         #           #                           #                                  ###             #          
+ #:  :#            #                                #    #                           #                    ####:           #                        
+ ##  ##            #                                #    #            :##  #:        #                    #  :#.          #                        
+ ##..## .###.   ## #   ###         #.    # ###    #####  #:##:        #######        # ##   #.  #         #   :#  ###     #   #.    # ###    #:##: 
+ #:  :# #: :#  #   #     :#         :   :#   #      #    #  :#        #######        #   #   : :          #    #    :#    #    :   :#   #    #  :# 
+ # ## #     #  #   #  #   #        .# # #:   #      #    #   #        :######        #   #  :# #:         #    # #   #    #   .# # #:   #    #   # 
+ # #  # :####  #   #  #####         #:#:#    #      #    #   #         #####         #   #   # #          #    # #####    #    #:#:#    #    #   # 
+ #    # #:  #  #   #  #             #####    #      #    #   #          ###          #   #   #            #   :# #        #    #####    #    #   # 
+ #    # #.  #  #   #      #         :#:#:    #      #.   #   #           #.          #   #    #:          #  :#.     #    #.   :#:#:    #    #   # 
+ #    # :##:#   ## #   ###:          # #   #####    :##  #   #                       # ##    :#           ####:   ###:    :##   # #   #####  #   # 
+                                                                                             :#                                                    
+                                                                                             #:                                                    
+                                                                                            ##                                                     
+-->`
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode }>): ReactElement {
     const primaryColor = '#189ad3';
@@ -54,6 +70,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                     {children}
                 </main>
                 <MobileMenu/>
+                <span dangerouslySetInnerHTML={{__html: comment}}></span>
                 </body>
                 </html>
             </ThemeProvider>
