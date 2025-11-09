@@ -55,7 +55,9 @@ export const SkillDetail = (): ReactElement => {
     const isMobile = useMediaQuery('(max-width: 1024px)');
     return (
         <Paper className="p-4 h-full relative" elevation={1}>
-            {activeSkill && components.hasOwnProperty(activeSkill) && !isMobile && <SkillDetailComponent/>}
+            {activeSkill && components.hasOwnProperty(activeSkill) && !isMobile && (
+                <div className="sticky top-0"><SkillDetailComponent/></div>
+            )}
             {!activeSkill &&
                 <p>Hover über einen Skill um mehr Informationen zu erhalten. Mit einem Klick kannst du eine Auswahl sichern.</p>
             }
