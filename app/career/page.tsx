@@ -30,7 +30,7 @@ export default function Page() {
                         meinem naiven Optimismus oft umgesetzt und dabei Magento 2 in seinen Höhen und Tiefen kennengelernt.
                     </p>
                 </li>
-                <li className="ms-4">
+                <li className="mb-10 ms-4">
                     <div
                         className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -45,7 +45,7 @@ export default function Page() {
                         zur Y1 Digital AG.
                     </p>
                 </li>
-                <li className="ms-4">
+                <li className="mb-10 ms-4">
                     <div
                         className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
