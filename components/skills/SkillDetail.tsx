@@ -61,10 +61,14 @@ export const SkillDetailModal = (): ReactElement => {
     const activeSkill = useActiveSkill((state) => state.activeSkill);
     const isModalOpen = useActiveSkill((state) => state.isMobileModalOpen);
     const closeModal = useActiveSkill((state) => state.closeMobileModal);
+    const setClickedActiveSkill = useActiveSkill((state) => state.setClickedActiveSkill);
     const SkillDetailComponent = components[activeSkill];
     const isMobile = useMediaQuery('(max-width: 1024px)');
     useLayoutEffect(() => {
-        if (!isMobile && isModalOpen) closeModal();
+        if (!isMobile && isModalOpen) {
+            closeModal();
+            setClickedActiveSkill('');
+        }
     });
 
     return <Modal
@@ -77,12 +81,18 @@ export const SkillDetailModal = (): ReactElement => {
             },
         }}
         className="overflow-auto"
-        onClose={closeModal}>
+        onClose={() => {
+            closeModal();
+            setClickedActiveSkill('');
+        }}>
         <Fade in={isModalOpen}>
             <Box sx={style}>
                 <IconButton
                     aria-label="close"
-                    onClick={closeModal}
+                    onClick={() => {
+                        closeModal();
+                        setClickedActiveSkill('');
+                    }}
                     sx={(theme) => ({
                         position: 'absolute',
                         right: 8,
