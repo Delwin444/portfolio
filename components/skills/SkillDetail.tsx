@@ -67,6 +67,7 @@ export const SkillDetailModal = (): ReactElement => {
                 timeout: 500,
             },
         }}
+        className="overflow-auto"
         onClose={closeModal}>
         <Fade in={isModalOpen}>
             <Box sx={style}>
