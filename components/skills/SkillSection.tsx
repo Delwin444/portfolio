@@ -44,7 +44,7 @@ const skills: Record<SkillCategories, SkillListType> = {
     },
     [SkillCategories.ciCd]: {
         "Jenkins": 3,
-        "ArgoCD": 3,
+        "Argo CD": 3,
         "Tekton": 3,
         "Kubernetes": 2,
         "Docker": 4,

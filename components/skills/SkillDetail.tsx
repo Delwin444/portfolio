@@ -34,6 +34,12 @@ const components: Record<string, ComponentType> = {
     "Typo 3": dynamic(() => import("./skillDetails/backendFrameworks/Typo3"), {ssr: false, loading: SkillDetailLoader}),
     "Odoo": dynamic(() => import("./skillDetails/backendFrameworks/Odoo"), {ssr: false, loading: SkillDetailLoader}),
     "Wordpress": dynamic(() => import("./skillDetails/backendFrameworks/Wordpress"), {ssr: false, loading: SkillDetailLoader}),
+    "Docker": dynamic(() => import("./skillDetails/ciCd/Docker"), {ssr: false, loading: SkillDetailLoader}),
+    "Argo CD": dynamic(() => import("./skillDetails/ciCd/ArgoCD"), {ssr: false, loading: SkillDetailLoader}),
+    "Jenkins": dynamic(() => import("./skillDetails/ciCd/Jenkins"), {ssr: false, loading: SkillDetailLoader}),
+    "Tekton": dynamic(() => import("./skillDetails/ciCd/Tekton"), {ssr: false, loading: SkillDetailLoader}),
+    "Kubernetes": dynamic(() => import("./skillDetails/ciCd/Kubernetes"), {ssr: false, loading: SkillDetailLoader}),
+    "n8n": dynamic(() => import("./skillDetails/ciCd/N8n"), {ssr: false, loading: SkillDetailLoader}),
 
 };
 
