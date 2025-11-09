@@ -16,8 +16,8 @@ const menuElements: Array<MenuItem> = [
         icon: <Psychology/>
     },
     {
-        label: 'Referenzen',
-        path: '/references',
+        label: 'Werdegang',
+        path: '/career',
         icon: <Assignment/>
     },
 ];

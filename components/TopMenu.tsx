@@ -14,8 +14,8 @@ const menuElements: Array<MenuItemType> = [
         path: '/skills',
     },
     {
-        label: 'Referenzen',
-        path: '/references',
+        label: 'Werdegang',
+        path: '/career',
     },
 ];
 
