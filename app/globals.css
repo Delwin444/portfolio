@@ -95,4 +95,34 @@ html.light .logo-white {
   transition-delay: calc(var(--row-delay) + var(--col-delay));
 }
 
+.career-list li:before {
+  content: "";
+  position: fixed;
+  width: 80vw;
+  height: 80vh;
+  top: 10vh;
+  left: 10vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.1;
+  z-index: -1;
+  pointer-events: none;
+}
+.career-list .nm:hover:before {
+  background-image: url("../public/img/career/nm.svg");
+}
+.career-list .dS:hover:before {
+  background-image: url("../public/img/career/dotsource.png");
+}
+.career-list .y1:hover:before {
+  background-image: url("../public/img/career/y1.svg");
+}
+.career-list .real:hover:before {
+  background-image: url("../public/img/career/real.webp");
+}
+.career-list .mms:hover:before {
+  background-image: url("../public/img/career/mms.png");
+}
+
 /*# sourceMappingURL=globals.css.map */

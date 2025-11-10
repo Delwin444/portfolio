@@ -8,21 +8,21 @@ export default function Page() {
     return (
         <div className="max-w-[1280px] mx-auto px-4 py-10 pb-16 lg:pb-8">
             <h1 className="text-2xl font-semibold mb-6">Werdegang</h1>
-            <ol className="relative border-s border-gray-200 dark:border-gray-700">
-                <li className="mb-10 ms-4">
+            <ol className="career-list relative border-s border-gray-200 dark:border-gray-700">
+                <li className="nm mb-10 ms-4">
                     <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                         2014
                     </time>
                     <h3 className="text-lg font-semibold">
-                        Ausbildung
+                        Ausbildung next.motion OHG
                     </h3>
                     <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
                         In meiner 3-jährigen dualen Ausbildung als Fachinformatiker für Anwendungsentwicklung habe ich
                         meine ersten Kundenprojekte umgesetzt.
                     </p>
                 </li>
-                <li className="mb-10 ms-4">
+                <li className="dS mb-10 ms-4">
                     <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                         2017
@@ -36,14 +36,14 @@ export default function Page() {
                         meinem naiven Optimismus oft umgesetzt und dabei Magento 2 in seinen Höhen und Tiefen kennengelernt.
                     </p>
                 </li>
-                <li className="mb-10 ms-4">
+                <li className="y1 mb-10 ms-4">
                     <div
                         className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                         2020
                     </time>
                     <h3 className="text-lg font-semibold ">
-                        Sitewards / Y1
+                        Sitewards / Y1 GmbH
                     </h3>
                     <p className="text-base font-normal text-gray-500 dark:text-gray-400">
                         Sitewards war eine Frankfurter Agentur, die gerade einen neuen Standort in Leipzig aufbaute.
@@ -51,7 +51,7 @@ export default function Page() {
                         zur Y1 Digital AG.
                     </p>
                 </li>
-                <li className="mb-10 ms-4">
+                <li className="real mb-10 ms-4">
                     <div
                         className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -65,7 +65,7 @@ export default function Page() {
                         einigen Komponenten für <a href="https://www.kaufland.de/" target="_blank">kaufland.de</a> gearbeitet.
                     </p>
                 </li>
-                <li className="ms-4">
+                <li className="mms ms-4">
                     <div
                         className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
