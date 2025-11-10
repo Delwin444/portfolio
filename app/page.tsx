@@ -40,7 +40,7 @@ export default function Home() {
                   </div>
               </div>
           </div>
-          <div className="lg:max-w-[1280px] mx-auto px-4 py-10 pb-16 lg:pb-8">
+          <div className="max-w-[1280px] mx-auto px-4 py-10 pb-16 lg:pb-8">
               <blockquote
                   className="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
                   <span className="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">"Hallo Welt"</span>
@@ -49,7 +49,7 @@ export default function Home() {
                   <div className="flex-1">
                       <p>
                           2014 ging es wie bei vielen Entwickler:innen mit dem ersten "echo" los. Während meiner dualen Ausbildung
-                          in einer kleinen Agentur habe ich die ersten Kundenprojekte umgesetzt.
+                          in einer kleinen Agentur habe ich die ersten Kundenprojekte in PHP umgesetzt.
                       </p>
                   </div>
                   <div className="flex-1">

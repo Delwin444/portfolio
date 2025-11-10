@@ -1,6 +1,6 @@
 export default function Page() {
     return (
-        <div className="lg:max-w-[1280px] mx-auto px-4 py-10 pb-16 lg:pb-8">
+        <div className="max-w-[1280px] mx-auto px-4 py-10 pb-16 lg:pb-8">
             <h1 className="text-2xl font-semibold mb-6">Werdegang</h1>
             <ol className="relative border-s border-gray-200 dark:border-gray-700">
                 <li className="mb-10 ms-4">
