@@ -1,3 +1,9 @@
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Werdegang",
+}
+
 export default function Page() {
     return (
         <div className="max-w-[1280px] mx-auto px-4 py-10 pb-16 lg:pb-8">

@@ -1,3 +1,5 @@
+"use client";
+
 import {SpeedDial, SpeedDialAction, Box} from "@mui/material";
 import {useColorScheme} from "@mui/material";
 import {LightMode, DarkMode, SettingsBrightness} from '@mui/icons-material';

@@ -1,3 +1,5 @@
+"use client";
+
 import {BottomNavigation, BottomNavigationAction, Paper} from '@mui/material';
 import {Home, Psychology, Assignment} from '@mui/icons-material';
 import {ReactElement, useState, useMemo} from "react";

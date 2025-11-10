@@ -1,3 +1,5 @@
+"use client";
+
 import {AppBar, Container, Toolbar, Button} from "@mui/material";
 import {ReactElement} from "react";
 import Image from "next/image";

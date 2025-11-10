@@ -1,14 +1,10 @@
-"use client";
-
 import "./globals.css";
 import {ReactElement} from "react";
-import {ThemeProvider, createTheme} from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 import {ThemeSwitcher} from "del/components/ThemeSwitcher";
 import {MobileMenu} from "del/components/MobileMenu";
 import {TopMenu} from "del/components/TopMenu";
-import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
-import {AppRouterCacheProvider} from "@mui/material-nextjs/v13-appRouter";
+import {Metadata} from "next";
+import {Providers} from "del/app/Providers";
 
 const comment = `
 <!--
@@ -27,53 +23,27 @@ const comment = `
                                                                                             ##                                                     
 -->`
 
-export default function RootLayout({children,}: Readonly<{ children: React.ReactNode }>): ReactElement {
-    const primaryColor = '#189ad3';
-    const theme = createTheme({
-        cssVariables: {
-            colorSchemeSelector: 'class'
-        },
-        colorSchemes: {
-            dark: {
-                palette: {
-                    primary: {
-                        main: primaryColor,
-                        contrastText: 'rgba(0, 0, 0, 0.87)',
-                    }
-                }
-            },
-            light: {
-                palette: {
-                    primary: {
-                        main: primaryColor,
-                    }
-                }
-            },
-        },
-    });
+export const metadata: Metadata = {
+    title: {
+        template: '%s - Delwin444',
+        default: 'Portfolio - Delwin444',
+    },
+    description: 'Portfolio Seite eines Full-Stack Entwicklers aus dem Raum Leipzig'
 
+}
+
+export default function RootLayout({children,}: Readonly<{ children: React.ReactNode }>): ReactElement {
     return (
-        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-            <ThemeProvider theme={theme}>
-                <html lang="en" suppressHydrationWarning>
-                <head>
-                    <meta name="apple-mobile-web-app-title" content="Delwin444" />
-                    <title>Portfolio - Delwin444</title>
-                    <link rel="manifest" href="/manifest.json" />
-                </head>
-                <CssBaseline/>
-                <body className={`antialiased`}>
-                <InitColorSchemeScript attribute="class"/>
-                <TopMenu/>
-                <ThemeSwitcher/>
-                <main>
-                    {children}
-                </main>
-                <MobileMenu/>
-                <span dangerouslySetInnerHTML={{__html: comment}}></span>
-                </body>
-                </html>
-            </ThemeProvider>
-        </AppRouterCacheProvider>
+        <html lang="de" suppressHydrationWarning>
+        <body className={`antialiased`}>
+        <Providers>
+            <TopMenu/>
+            <ThemeSwitcher/>
+            <main>{children}</main>
+            <MobileMenu/>
+            <span dangerouslySetInnerHTML={{__html: comment}}></span>
+        </Providers>
+        </body>
+        </html>
     );
 }

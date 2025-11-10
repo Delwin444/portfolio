@@ -1,5 +1,10 @@
 import {SkillSection} from "del/components/skills/SkillSection";
 import {SkillDetail, SkillDetailModal} from "del/components/skills/SkillDetail";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Skills",
+}
 
 export default function Page() {
     return (
