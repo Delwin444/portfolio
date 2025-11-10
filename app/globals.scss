@@ -1,0 +1,73 @@
+@use "../public/styles/tailwind.css";
+@use "../public/styles/mui.css";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html.dark {
+  .logo-colored {
+    display: block;
+  }
+
+  .logo-white {
+    display: none;
+  }
+}
+
+html.light {
+  .logo-colored {
+    display: none;
+  }
+
+  .logo-white {
+    display: block;
+  }
+}
+
+
+@for $i from 1 through 10 {
+  .skill-element:nth-child(#{$i}) {
+    .skill-indicator-row {
+      .active:after {
+        --row-delay: calc(0.1s * #{$i - 1});
+      }
+    }
+  }
+}
+
+.skill-indicator-row {
+  @for $i from 1 through 5 {
+    .active {
+      &:nth-child(#{$i}):after {
+        --col-delay: calc(0.15s * #{$i - 1});
+      }
+    }
+  }
+
+  &:after {
+    transition-duration: 0s;
+  }
+
+  .active {
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 100%;
+      background-color: var(--color-gray-400);
+      margin-left: 0;
+      --duration: 0;
+      transition: margin-left var(--duration) ease-out;
+      transition-delay: 0.3s;
+
+
+      .Mui-expanded & {
+        margin-left: 100%;
+        --duration: 0.2s;
+        transition-delay: calc(var(--row-delay) + var(--col-delay));
+      }
+    }
+  }
+}

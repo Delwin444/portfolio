@@ -1,26 +1,98 @@
-@layer theme, base, mui, components, utilities;
 @import "tailwindcss";
-
+@layer theme, base, mui, components, utilities;
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 html.dark .logo-colored {
-    display: block;
+  display: block;
+}
+html.dark .logo-white {
+  display: none;
 }
 
 html.light .logo-colored {
-    display: none;
+  display: none;
 }
-
-html.dark .logo-white {
-    display: none;
-}
-
 html.light .logo-white {
-    display: block;
+  display: block;
 }
 
-p {
-    margin-bottom: 1rem;
+.skill-element:nth-child(1) .skill-indicator-row .active:after {
+  --row-delay: calc(0.1s * 0);
 }
+
+.skill-element:nth-child(2) .skill-indicator-row .active:after {
+  --row-delay: calc(0.1s * 1);
+}
+
+.skill-element:nth-child(3) .skill-indicator-row .active:after {
+  --row-delay: calc(0.1s * 2);
+}
+
+.skill-element:nth-child(4) .skill-indicator-row .active:after {
+  --row-delay: calc(0.1s * 3);
+}
+
+.skill-element:nth-child(5) .skill-indicator-row .active:after {
+  --row-delay: calc(0.1s * 4);
+}
+
+.skill-element:nth-child(6) .skill-indicator-row .active:after {
+  --row-delay: calc(0.1s * 5);
+}
+
+.skill-element:nth-child(7) .skill-indicator-row .active:after {
+  --row-delay: calc(0.1s * 6);
+}
+
+.skill-element:nth-child(8) .skill-indicator-row .active:after {
+  --row-delay: calc(0.1s * 7);
+}
+
+.skill-element:nth-child(9) .skill-indicator-row .active:after {
+  --row-delay: calc(0.1s * 8);
+}
+
+.skill-element:nth-child(10) .skill-indicator-row .active:after {
+  --row-delay: calc(0.1s * 9);
+}
+
+.skill-indicator-row .active:nth-child(1):after {
+  --col-delay: calc(0.15s * 0);
+}
+.skill-indicator-row .active:nth-child(2):after {
+  --col-delay: calc(0.15s * 1);
+}
+.skill-indicator-row .active:nth-child(3):after {
+  --col-delay: calc(0.15s * 2);
+}
+.skill-indicator-row .active:nth-child(4):after {
+  --col-delay: calc(0.15s * 3);
+}
+.skill-indicator-row .active:nth-child(5):after {
+  --col-delay: calc(0.15s * 4);
+}
+.skill-indicator-row:after {
+  transition-duration: 0s;
+}
+.skill-indicator-row .active {
+  overflow: hidden;
+}
+.skill-indicator-row .active:after {
+  content: "";
+  display: block;
+  height: 100%;
+  background-color: var(--color-gray-400);
+  margin-left: 0;
+  --duration: 0;
+  transition: margin-left var(--duration) ease-out;
+  transition-delay: 0.3s;
+}
+.Mui-expanded .skill-indicator-row .active:after {
+  margin-left: 100%;
+  --duration: 0.2s;
+  transition-delay: calc(var(--row-delay) + var(--col-delay));
+}
+
+/*# sourceMappingURL=globals.css.map */

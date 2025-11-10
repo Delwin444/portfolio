@@ -11,11 +11,9 @@ export const SkillList = ({skills}: { skills: SkillListType }): ReactElement => 
     ), [skills])
     return (
         <>
-            <section className="grid grid-cols-3">
-                {sortedSkills.map((skillName) => {
-                    return <SkillElement key={skillName} skill={skillName} rating={skills[skillName]}/>
-                })}
-            </section>
+            {sortedSkills.map((skillName) => {
+                return <SkillElement key={skillName} skill={skillName} rating={skills[skillName]}/>
+            })}
         </>
     );
 };

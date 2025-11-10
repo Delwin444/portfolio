@@ -18,7 +18,7 @@ export const SkillElement = ({skill, rating}: SkillElementProps): ReactElement =
     const isActive = useActiveSkill((state) => state.activeSkill === skill);
     const isClicked = useActiveSkill((state) => state.clickedActiveSkill === skill);
     return (
-        <>
+        <div className="skill-element grid grid-cols-3">
             <div className="text-right">
                 <span className={"cursor-pointer p-0.5 inline-block text-lg pr-6 " +
                         (isActive ? 'underline ' : ' ') +
@@ -41,14 +41,14 @@ export const SkillElement = ({skill, rating}: SkillElementProps): ReactElement =
                      if (isMobile) openMobileModal();
                  }}
             >
-                <div className="flex w-full items-stretch gap-1 h-2">
+                <div className="skill-indicator-row flex w-full items-stretch gap-1 h-2">
                     {[...Array(maxSkillRating).keys()].map((index: number): ReactElement => {
                         return <div
-                            className={`${index < rating ? activeColor : 'bg-gray-400'} flex-1 h-full rounded-xs`}
+                            className={`${index < rating ? activeColor + ' active' : 'bg-gray-400'} flex-1 h-full rounded-xs`}
                             key={index}></div>
                     })}
                 </div>
             </div>
-        </>
+        </div>
     );
 };
