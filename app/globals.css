@@ -18,6 +18,10 @@ html.light .logo-white {
   display: block;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
 .skill-element:nth-child(1) .skill-indicator-row .active:after {
   --row-delay: calc(0.1s * 0);
 }

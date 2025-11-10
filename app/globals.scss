@@ -25,6 +25,9 @@ html.light {
   }
 }
 
+p {
+  margin-bottom: 1rem;
+}
 
 @for $i from 1 through 10 {
   .skill-element:nth-child(#{$i}) {
