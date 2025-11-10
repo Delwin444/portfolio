@@ -87,7 +87,6 @@ export const SkillSection = () => {
 
     return (
         <>
-            <h1>Skills</h1>
             <ButtonGroup className="pb-4">
                 {(Object.keys(skills) as SkillCategories[]).map((category) => {
                     return <Tooltip key={category} title={labels[category]}>
