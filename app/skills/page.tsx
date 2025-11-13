@@ -10,6 +10,7 @@ export default function Page() {
     return (
         <div className="max-w-[1280px] mx-auto px-4 py-10 pb-16 lg:pb-8">
             <h1 className="text-2xl font-semibold mb-6">Skills</h1>
+            <p className="lg:hidden">Klicke auf einen Skill um mehr zu erfahren.</p>
             <div className="flex gap-8">
                 <div className="hidden lg:block flex-1">
                     <SkillDetail/>
