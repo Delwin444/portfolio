@@ -68,7 +68,7 @@ export default function Home() {
                         <Image className="max-w-full mx-auto rounded-xl" src="/img/avatar-isolated.png" alt="Avatar" width={800} height={800} placeholder="blur" blurDataURL="/img/avatar-isolated-blur.png"/>
                     </div>
                     <div className="flex-1 mb-8 md:mb-0 md:p-8">
-                        Ich bin Baujahr &#39;96 aus Thüringen und 2019 ins Leipziger Umland gezogen.<br />
+                        Ich bin Baujahr &#39;96, aus dem schönen Thüringen und war 2019 ins Leipziger Umland gezogen.<br />
                         In meiner Freizeit spiele ich Klavier und bin in der Leipziger Lego- sowie GameDev-Community aktiv.
                         Neben Videospielen versuche ich auch einen Ausgleich beim Tischtennis, Fahrradfahren und im Fitnessstudio zu finden.
                     </div>
