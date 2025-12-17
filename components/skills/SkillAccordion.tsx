@@ -19,7 +19,7 @@ export const SkillAccordion = React.memo(function SkillAccordion (SkillAccordion
         <Accordion expanded={expanded}
                    onChange={() => handleToggle(category)}>
             <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
-                <h3 className="text-xl p-1">{label}</h3>
+                <h2 className="text-xl p-1">{label}</h2>
             </AccordionSummary>
             <AccordionDetails>
                 <SkillList skills={skills[category]}/>
