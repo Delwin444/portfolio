@@ -10,6 +10,8 @@ export default function Home() {
                        className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center brightness-40 blur-xs"
                        width={1920}
                        height={943}
+                       placeholder="blur"
+                       blurDataURL="/img/computer-1836330_1920-blur.png"
                 />
                 <div className="mx-auto max-w-7xl lg:px-8 p-10">
                     <div className="mx-auto max-w-2xl lg:mx-0">
