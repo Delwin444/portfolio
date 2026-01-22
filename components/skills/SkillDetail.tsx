@@ -29,6 +29,7 @@ const components: Record<string, ComponentType> = {
     "VueJS": dynamic(() => import("./skillDetails/frontendFrameworks/Vue"), {ssr: false, loading: SkillDetailLoader}),
     "Magento 2": dynamic(() => import("./skillDetails/backendFrameworks/Magento"), {ssr: false, loading: SkillDetailLoader}),
     "Next.js": dynamic(() => import("./skillDetails/backendFrameworks/Nextjs"), {ssr: false, loading: SkillDetailLoader}),
+    "NestJS": dynamic(() => import("./skillDetails/backendFrameworks/Nest"), {ssr: false, loading: SkillDetailLoader}),
     "Symfony": dynamic(() => import("./skillDetails/backendFrameworks/Symfony"), {ssr: false, loading: SkillDetailLoader}),
     "Doctrine": dynamic(() => import("./skillDetails/backendFrameworks/Doctrine"), {ssr: false, loading: SkillDetailLoader}),
     "Typo 3": dynamic(() => import("./skillDetails/backendFrameworks/Typo3"), {ssr: false, loading: SkillDetailLoader}),

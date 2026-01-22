@@ -38,6 +38,7 @@ const skills: Record<SkillCategories, SkillListType> = {
         "Doctrine": 2,
         "Magento 2": 5,
         "Next.js": 3,
+        "NestJS": 2,
         "Typo 3": 2,
         "Odoo": 1,
         "Wordpress": 1,
