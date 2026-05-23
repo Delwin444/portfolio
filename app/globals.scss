@@ -120,4 +120,10 @@ p {
       background-image: url('../public/img/career/mms.png');
     }
   }
+
+  .clarius {
+    &:hover:before {
+      background-image: url('../public/img/career/clarius_services.svg');
+    }
+  }
 }

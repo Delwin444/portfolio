@@ -6,14 +6,27 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
-        <div className="max-w-[1280px] mx-auto px-4 py-10 pb-16 lg:pb-8">
+        <div className="max-w-7xl mx-auto px-4 py-10 pb-16 lg:pb-8">
             <h1 className="text-2xl font-semibold mb-6">Werdegang</h1>
             <ol className="career-list relative border-s border-gray-200 dark:border-gray-700">
-                <li className="mms ms-4">
+                <li className="clarius mb-10 ms-4">
                     <div
                         className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                        2022 - heute
+                        2026 - heute
+                    </time>
+                    <h3 className="text-lg font-semibold ">
+                        Clarius Services
+                    </h3>
+                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                        Individualentwicklung an der internen Legal-Tech Lösung Clarius Solution Suite (NextJS).
+                    </p>
+                </li>
+                <li className="mms mb-10 ms-4">
+                    <div
+                        className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                        2022 - 2026
                     </time>
                     <h3 className="text-lg font-semibold ">
                         Telekom MMS
@@ -26,7 +39,7 @@ export default function Page() {
                     <div
                         className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                        2021
+                        2021 - 2022
                     </time>
                     <h3 className="text-lg font-semibold ">
                         real.digital
@@ -40,7 +53,7 @@ export default function Page() {
                     <div
                         className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                        2020
+                        2020 - 2021
                     </time>
                     <h3 className="text-lg font-semibold ">
                         Sitewards / Y1 GmbH
@@ -55,7 +68,7 @@ export default function Page() {
                 <li className="dS mb-10 ms-4">
                     <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                        2017
+                        2017 - 2019
                     </time>
                     <h3 className="text-lg font-semibold">
                         dot.Source SE
@@ -66,10 +79,10 @@ export default function Page() {
                         meinem naiven Optimismus oft umgesetzt und dabei Magento 2 in seinen Höhen und Tiefen kennengelernt.
                     </p>
                 </li>
-                <li className="nm mb-10 ms-4">
+                <li className="nm ms-4">
                     <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                        2014
+                        2014 - 2017
                     </time>
                     <h3 className="text-lg font-semibold">
                         Ausbildung next.motion OHG

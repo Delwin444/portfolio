@@ -128,5 +128,8 @@ p {
 .career-list .mms:hover:before {
   background-image: url("../public/img/career/mms.png");
 }
+.career-list .clarius:hover:before {
+  background-image: url("../public/img/career/clarius_services.svg");
+}
 
 /*# sourceMappingURL=globals.css.map */
