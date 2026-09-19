@@ -21,6 +21,9 @@ html.light .logo-white {
 p {
   margin-bottom: 1rem;
 }
+p:last-child {
+  margin-bottom: 0 !important;
+}
 
 .skill-element:nth-child(1) .skill-indicator-row .active:after {
   --row-delay: calc(0.1s * 0);

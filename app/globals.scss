@@ -27,6 +27,10 @@ html.light {
 
 p {
   margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
 }
 
 @for $i from 1 through 10 {
