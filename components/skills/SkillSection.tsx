@@ -21,7 +21,7 @@ const skills: Record<SkillCategories, SkillListType> = {
         "PHP": 4,
         "gdScript": 4,
         "Javascript": 4,
-        "Typescript": 3,
+        "Typescript": 4,
         "C++": 1,
     },
     [SkillCategories.frontendFrameworks]: {
@@ -47,7 +47,7 @@ const skills: Record<SkillCategories, SkillListType> = {
         "Jenkins": 3,
         "Argo CD": 3,
         "Tekton": 3,
-        "Kubernetes": 2,
+        "Kubernetes": 3,
         "Docker": 4,
         "n8n": 1,
     },

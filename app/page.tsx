@@ -25,7 +25,7 @@ export default function Home() {
                         <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
                             <div className="flex flex-col-reverse gap-1">
                                 <dt className="text-base/7 text-gray-300">Jahre Erfahrung</dt>
-                                <dd className="text-4xl font-semibold tracking-tight text-white">8+</dd>
+                                <dd className="text-4xl font-semibold tracking-tight text-white">9+</dd>
                             </div>
                             <div className="flex flex-col-reverse gap-1">
                                 <dt className="text-base/7 text-gray-300">spreche ich fließend</dt>

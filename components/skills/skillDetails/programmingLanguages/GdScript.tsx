@@ -14,7 +14,7 @@ const GdScript = () => {
                 <b>gdScript</b> ist die native Scriptsprache der Engine. Die Syntax ähnelt einer Mischung aus Python und JS.
             </p>
             <p>
-                2 mal im Jahr versuche ich an "Game-Jams" teilzunehmen. Das letzte Ergebnis ist hier zu sehen:<br />
+                2 mal im Jahr versuche ich an &quot;Game-Jams&quot; teilzunehmen. Das letzte Ergebnis ist hier zu sehen:<br />
             </p>
             <a href="https://www.youtube.com/watch?v=pkQEwNifHpM" target="_blank" className="inline-block p-2 border hover:underline">YouTube Video</a>
         </>
